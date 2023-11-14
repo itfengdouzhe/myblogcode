@@ -34,8 +34,8 @@
 | 运行环境 | 华为云Centos          |
 
 #### 1.4.结构设计
+![图片1](https://github.com/itfengdouzhe/myblogcode/assets/54253703/fc89a8f5-d5c2-4cc7-ae59-8557caca951b)
 
-![image-20231114145632768](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20231114145632768.png)
 
 ![e936cec553b5b745407e0cf84c12088](C:\Users\Administrator\Desktop\材料\e936cec553b5b745407e0cf84c12088.png)
 
