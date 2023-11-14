@@ -35,35 +35,38 @@
 
 #### 1.4.结构设计
 ![图片1](https://github.com/itfengdouzhe/myblogcode/assets/54253703/fc89a8f5-d5c2-4cc7-ae59-8557caca951b)
+对于熟悉Spring开发过的人来说，相信对此结构也不会陌生。平时的开发过程中，结构设计是重要的环节，特别是协作开发的时候，明细的分包，模块化，可减少代码提交时的冲突。并且明确的结构有助于我们快速的寻找所对应的类。
 
+![e936cec553b5b745407e0cf84c12088](https://github.com/itfengdouzhe/myblogcode/assets/54253703/37148af8-4d33-40fb-b23e-0ed336de6a95)
 
-![e936cec553b5b745407e0cf84c12088](C:\Users\Administrator\Desktop\材料\e936cec553b5b745407e0cf84c12088.png)
 
 ### 2.项目内容
 
 #### 2.1.页面展示
 
-![首页_01](C:\Users\Administrator\Desktop\材料\首页_01.png)
+![首页_01](https://github.com/itfengdouzhe/myblogcode/assets/54253703/42c899ac-89b0-4b56-8b75-a83cb257bf55)
 
 #### 2.2.博客分类
+![博客分类_02](https://github.com/itfengdouzhe/myblogcode/assets/54253703/a253ee00-8848-4f4b-bd18-b0b5fb84bd29)
 
-![博客分类_02](C:\Users\Administrator\Desktop\材料\博客分类_02.png)
 
 #### 2.3.面试辅导
 
-![面试辅导_03](C:\Users\Administrator\Desktop\材料\面试辅导_03.png)
+![面试辅导_03](https://github.com/itfengdouzhe/myblogcode/assets/54253703/bbb934de-9ebf-40b3-a509-5c91540e422c)
+
 
 #### 2.4.私教带徒
 
-![私教带徒_04](C:\Users\Administrator\Desktop\材料\私教带徒_04.png)
+![私教带徒_04](https://github.com/itfengdouzhe/myblogcode/assets/54253703/7158e639-4a05-4348-a57c-e77eb129e939)
+
 
 #### 2.5.文章编辑
-
-![文章编辑](C:\Users\Administrator\Desktop\材料\文章编辑.png)
+![文章编辑](https://github.com/itfengdouzhe/myblogcode/assets/54253703/73e437a7-1028-4ce3-bd20-91787c64541f)
 
 #### 2.6.后台管理
 
-![5a2986678b5f218ad26118c5fdbe9df](D:\wechart\WeChat Files\wxid_iajw48j8m3yu12\FileStorage\Temp\5a2986678b5f218ad26118c5fdbe9df.png)
+![后台管理](https://github.com/itfengdouzhe/myblogcode/assets/54253703/b7063681-b8d0-4cfb-b408-eadc7740c087)
+
 
 ### 3.功能描述
 
@@ -107,16 +110,17 @@
 ### 4.项目业务设计
 
 #### 4.1.发表文章流程
+![image-20231114150912682](https://github.com/itfengdouzhe/myblogcode/assets/54253703/0bd8c4d6-736c-45b0-9cdb-d750aa92fa30)
 
-![image-20231114150912682](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20231114150912682.png)
 
 #### 4.2.登录流程
 
-![image-20231114150931573](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20231114150931573.png)
+![image-20231114150931573](https://github.com/itfengdouzhe/myblogcode/assets/54253703/dcb16787-cf55-476b-872d-2457bf87e32d)
+
 
 #### 4.3.用户个人资料修改流程
+![image-20231114150951820](https://github.com/itfengdouzhe/myblogcode/assets/54253703/e360e918-0aed-4584-bc99-1cdac08587d2)
 
-![image-20231114150951820](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20231114150951820.png)
 
 #### 4.4.打包、部署和运行
 
@@ -206,5 +210,5 @@
 - 要实现在一个页面进行权限验证，如果验证不成功会跳转到登录界面，并且登录成功后还要返回到之前界面，这里由于对SpringSecurity内部原理的不了解，所以我这里采用的方法是利用请求头和响应头存储url，并在登录成功后的页面出跳转到响应头中存储的url处。
 - 上传头像处使用上传头像至华为云的OBS对象存储中，由于上传问题并没有返回上传成功后的图片url地址，于是只好设置OBS的Bucket为公共读权限，然后当上传成功后手动拼接图片url并存入数据库。
 - 项目中最大的难点还是莫过于页面css的设计，但是使用了妹子UI后极大的解决了这个问题，只需修改少量css就能实现自己所需要的样式。
+![Uploading e936cec553b5b745407e0cf84c12088.png…]()
 
-![e936cec553b5b745407e0cf84c12088](C:\Users\Administrator\Desktop\材料\e936cec553b5b745407e0cf84c12088.png)
