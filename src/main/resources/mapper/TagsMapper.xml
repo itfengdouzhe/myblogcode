@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.javatiaocao.myblog.mapper.TagMapper"><!-- 命名空间，用来找到对应的xml文件 -->
+
+    <insert id="saveTags">
+        insert into tags(tagName,tagSize) values (#{tagName},#{tagSize})
+    </insert>
+
+    <select id="findIsExistByTagName" resultType="java.lang.Boolean">
+        select IFNULL(max(id),0) from tags where tagName = #{tagName}
+    </select>
+
+    <select id="getTagsSizeByName" resultType="java.lang.Integer">
+        select DISTINCT tagSize from tags where tagName = #{tagName} GROUP BY tagName
+    </select>
+
+    <select id="countTagsNum" resultType="java.lang.Integer">
+        select count(*) from tags
+    </select>
+
+    <select id="findTagsCloud"  resultType="com.javatiaocao.myblog.model.Tags">
+        select * from tags order by id desc
+    </select>
+</mapper>

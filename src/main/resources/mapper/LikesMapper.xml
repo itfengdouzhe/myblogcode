@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.javatiaocao.myblog.mapper.LikesMapper"><!-- 命名空间，用来找到对应的xml文件 -->
+
+    <select id="getArticleThumbsUp" resultType="com.javatiaocao.myblog.model.ArticleLikesRecord">
+        select * from article_likes_record order by id desc
+    </select>
+
+    <select id="getMsgIsNotReadNum" resultType="java.lang.Integer" >
+        select count(*) from article_likes_record where isRead = 1
+    </select>
+
+    <update id="readAllThumbsUp">
+        update article_likes_record set isRead = 0
+    </update>
+
+    <select id="getFriendLink" resultType="com.javatiaocao.myblog.model.FriendLink">
+            select * from friendlink
+    </select>
+
+    <insert id="addFriendLink">
+        insert into friendlink(blogger,url) values (#{blogger},#{url})
+    </insert>
+
+    <update id="updateFriendLink">
+        update friendlink set blogger=#{friendLink.blogger},url=#{friendLink.url} where id = #{id}
+    </update>
+
+    <delete id="deleteFriendLink">
+        delete from friendlink where id = #{id}
+    </delete>
+
+    <select id="isLiked" resultType="com.javatiaocao.myblog.model.ArticleLikesRecord">
+        select likeDate from article_likes_record where articleId = #{articleId} and likerId = #{likerId}
+    </select>
+
+    <insert id="inertArticleLikesRecord">
+        insert into article_likes_record(articleId,likerId,likeDate,isRead) values (#{articleId},#{likerId},#{likeDate},#{isRead})
+    </insert>
+</mapper>

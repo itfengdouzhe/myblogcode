@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.javatiaocao.myblog.mapper.CommentMapper"><!-- 命名空间，用来找到对应的xml文件 -->
+
+    <select id="queryComment" resultType="com.javatiaocao.myblog.model.Comment">
+        select * from comment_record order by id
+    </select>
+
+    <select id="countCommentMapper" resultType="java.lang.Integer">
+        select count(*) from comment_record
+    </select>
+</mapper>

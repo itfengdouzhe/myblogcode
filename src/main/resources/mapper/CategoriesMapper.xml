@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.javatiaocao.myblog.mapper.CategoriesMapper"><!-- 命名空间，用来找到对应的xml文件 -->
+
+    <select id="getArticleCategories" resultType="com.javatiaocao.myblog.model.Categories">
+        SELECT id,categoryName from categories
+    </select>
+
+    <select id="findIsExisByCategoryName" resultType="java.lang.Integer">
+        SELECT
+            IFNULL(
+                    (
+                        SELECT
+                            id
+                        FROM
+                            categories
+                        WHERE
+                            categoryName = #{categoryName}
+                    ),
+                    0
+                )
+    </select>
+
+
+    <insert id="savaCategories">
+    insert into categories(categoryName) values (#{categoryName})
+    </insert>
+
+    <delete id="deteleCategory">
+        delete from categories where categoryName = #{categoryName}
+    </delete>
+
+    <select id="findCategoriesNames" resultType="java.lang.String">
+        select categoryName from categories
+    </select>
+
+    <select id="getPageLeaveMessage" resultType="com.javatiaocao.myblog.model.LeaveMessage">
+        select * from leave_message_record where pageName = #{pageName} and pId=${pId} order by id desc
+    </select>
+
+    <select id="getCategoryArticle" resultType="com.javatiaocao.myblog.model.Article">
+        select * from article where  articleCategories = #{category} order by id desc
+    </select>
+
+    <select id="getCategoryArticles" resultType="com.javatiaocao.myblog.model.Article">
+        select * from article order by id desc
+    </select>
+
+    <select id="findCategoriesNameAndArticleNum" resultType="java.lang.String">
+        select categoryName from categories
+    </select>
+
+    <select id="findLeaveMessageReplyByPageNameAndPid" resultType="com.javatiaocao.myblog.model.LeaveMessage">
+        select * from leave_message_likes_record where pageName = #{pageName} and pId = #{id}
+    </select>
+
+    <insert id="publishLeaveMessage">
+        insert into leave_message_record (pageName,pId,answererId,respondentId,leaveMessageDate,likes,leaveMessageContent,isRead)
+         values (#{pageName},#{pId},#{answererId},#{respondentId},#{leaveMessageDate},#{likes},#{leaveMessageContent},#{isRead})
+    </insert>
+</mapper>
