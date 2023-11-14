@@ -1,8 +1,33 @@
-### 1.项目架构及技术描述
+### 1.项目内容
 
-------
+#### 1.1.页面展示
 
-#### 1.1.本项目用到的技术和框架
+![首页_01](https://github.com/itfengdouzhe/myblogcode/assets/54253703/42c899ac-89b0-4b56-8b75-a83cb257bf55)
+
+#### 1.2.博客分类
+![博客分类_02](https://github.com/itfengdouzhe/myblogcode/assets/54253703/a253ee00-8848-4f4b-bd18-b0b5fb84bd29)
+
+
+#### 1.3.面试辅导
+
+![面试辅导_03](https://github.com/itfengdouzhe/myblogcode/assets/54253703/bbb934de-9ebf-40b3-a509-5c91540e422c)
+
+
+#### 1.4.私教带徒
+
+![私教带徒_04](https://github.com/itfengdouzhe/myblogcode/assets/54253703/7158e639-4a05-4348-a57c-e77eb129e939)
+
+
+#### 1.5.文章编辑
+![文章编辑](https://github.com/itfengdouzhe/myblogcode/assets/54253703/73e437a7-1028-4ce3-bd20-91787c64541f)
+
+#### 1.6.后台管理
+
+![后台管理](https://github.com/itfengdouzhe/myblogcode/assets/54253703/b7063681-b8d0-4cfb-b408-eadc7740c087)
+### 2.项目架构及技术描述
+
+
+#### 2.1.本项目用到的技术和框架
 
 - 项目构建：Maven
 - web框架：Springboot
@@ -14,13 +39,13 @@
 - 前端模板：Thymeleaf
 - 文章展示：Editor.md
 
-#### 1.2.本项目中的关键点
+#### 2.2.本项目中的关键点
 
 - 采用Springboot开发，数据库使用连接池加orm框架的模式，对于系统的关键业务使用Redis缓存，加快相应速度。
 - 整体系统采用门户网站+后台管理+用户个人中心的方式搭建，门户网站展示博客内容以及博主介绍，后台管理用于编辑文章，查看反馈，管理评论留言。
 - 使用华为云obs进行静态资源存储，以及CDN全站加速。
 
-#### 1.3.开发环境
+#### 2.3.开发环境
 
 | 工具     | 名称                  |
 | -------- | --------------------- |
@@ -33,40 +58,11 @@
 | 项目构建 | Maven                 |
 | 运行环境 | 华为云Centos          |
 
-#### 1.4.结构设计
+#### 2.4.结构设计
 ![图片1](https://github.com/itfengdouzhe/myblogcode/assets/54253703/fc89a8f5-d5c2-4cc7-ae59-8557caca951b)
 对于熟悉Spring开发过的人来说，相信对此结构也不会陌生。平时的开发过程中，结构设计是重要的环节，特别是协作开发的时候，明细的分包，模块化，可减少代码提交时的冲突。并且明确的结构有助于我们快速的寻找所对应的类。
 
 ![e936cec553b5b745407e0cf84c12088](https://github.com/itfengdouzhe/myblogcode/assets/54253703/37148af8-4d33-40fb-b23e-0ed336de6a95)
-
-
-### 2.项目内容
-
-#### 2.1.页面展示
-
-![首页_01](https://github.com/itfengdouzhe/myblogcode/assets/54253703/42c899ac-89b0-4b56-8b75-a83cb257bf55)
-
-#### 2.2.博客分类
-![博客分类_02](https://github.com/itfengdouzhe/myblogcode/assets/54253703/a253ee00-8848-4f4b-bd18-b0b5fb84bd29)
-
-
-#### 2.3.面试辅导
-
-![面试辅导_03](https://github.com/itfengdouzhe/myblogcode/assets/54253703/bbb934de-9ebf-40b3-a509-5c91540e422c)
-
-
-#### 2.4.私教带徒
-
-![私教带徒_04](https://github.com/itfengdouzhe/myblogcode/assets/54253703/7158e639-4a05-4348-a57c-e77eb129e939)
-
-
-#### 2.5.文章编辑
-![文章编辑](https://github.com/itfengdouzhe/myblogcode/assets/54253703/73e437a7-1028-4ce3-bd20-91787c64541f)
-
-#### 2.6.后台管理
-
-![后台管理](https://github.com/itfengdouzhe/myblogcode/assets/54253703/b7063681-b8d0-4cfb-b408-eadc7740c087)
-
 
 ### 3.功能描述
 
